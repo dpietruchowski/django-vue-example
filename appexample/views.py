@@ -12,8 +12,11 @@ from .models import (
     User
 )
 
-class Index(VueView):
+class IndexView(VueView):
     pass
+
+class UserListView(VueView):
+    vue_page = 'user_list.js'
 
 class UserEditView(ObjectView): 
     vue_page = 'user_edit.js'
@@ -23,5 +26,5 @@ class UserEditView(ObjectView):
     page = 'edit'
 
 class UserSearchView(NameSearchView):
-    properties=['id', 'name', 'brand', 'price', 'group']
+    properties=['id', 'name', 'surname', 'age']
     model = User

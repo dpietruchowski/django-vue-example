@@ -1,14 +1,17 @@
 <template>
-    <edit-form  url="/pricing/product"
-                :title="title"
-                :pk="pk"
-                :csrftoken="csrftoken"
-                :cols="cols"
-                :init_form="form">
-    </edit-form>
+    <app-body active_item="user_new">
+        <edit-form  url="/pricing/product"
+                    :title="title"
+                    :pk="pk"
+                    :csrftoken="csrftoken"
+                    :cols="cols"
+                    :init_form="form">
+        </edit-form>
+    </app-body>
 </template>
 
 <script>
+import AppBody from './AppBody.vue'
 import EditFrom from 'components/EditForm.vue'
 export default {
     props: {
@@ -22,11 +25,12 @@ export default {
         }
     },
     components: {
+        'app-body': AppBody,
         'edit-form': EditFrom
     },
     data: function() {
         return {
-            title: 'Nowy produkt',
+            title: 'Nowy użytkownik',
             cols: {
                 name: {display: 'Imie', type: 'text'},
                 surname: {display: 'Nazwisko', type: 'text'},

@@ -161,7 +161,6 @@ class QueryView(View):
     properties = []
     def get(self, request, *args, **kwargs):
         avaiable = True
-        #pdb.set_trace()
         for query in self.queries:
             if not query in request.GET:
                 avaiable = False

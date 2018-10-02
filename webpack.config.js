@@ -5,7 +5,9 @@ module.exports = {
   entry: {
     main: './src/test/main.js',
     user_edit: './src/appexample/user_edit.js',
+    user_list: './src/appexample/user_list.js',
     index: './src/appexample/index.js',
+    home: './src/home.js',
   },
   output: {
     path: path.resolve(__dirname, './dist'),

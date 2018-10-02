@@ -15,8 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from common.views import VueView
 
 urlpatterns = [
+    path('', VueView.as_view(vue_page='home.js'), name='home'),
     path('appexample/', include('appexample.urls')),
     path('admin/', admin.site.urls),
 ]
